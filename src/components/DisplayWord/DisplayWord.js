@@ -1,8 +1,10 @@
 import "./DisplayWord.css";
+import SkeletonLoad from "./SkeletonLoad";
 
 const DisplayWord = () => {
   return (
     <section className="word__container">
+      <SkeletonLoad />
       <h1 className="word__title">Hello</h1>
       <section className="word__subContainer">
         <span className="word_translation">/he'leu</span>
