@@ -1,5 +1,6 @@
 .search__container{
     padding: 1rem;
+    border: 1px solid;
 
 }
 
@@ -12,6 +13,7 @@
     display: flex;
     flex-direction: column;
     font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .search__label{
@@ -34,6 +36,7 @@
     width: 100%;
     border: none;
     padding: 1rem 0.5rem;
+    outline: none;
 }
 
 .search--button{
