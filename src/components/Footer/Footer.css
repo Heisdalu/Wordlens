@@ -14,6 +14,10 @@
     margin-top: 1rem;
 }
 
+.footer__content{
+    max-width: 500px;
+}
+
 .footer__api__link{
     margin: 1rem 0;
     border: 1px solid #000000;
