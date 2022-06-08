@@ -1,0 +1,36 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.error__heading{
+    text-align: center;
+    max-width: 400px;
+}
+
+.inner__error{
+    text-align: center;
+}
+
+.error__number{
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.error_sub_heading{
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.reset{
+    margin-top: 1rem;
+    padding: 10px 2rem;
+    background-color: transparent;
+    border: 2px solid black;
+    font-weight: 600;
+    font-size: 1rem;
+}
