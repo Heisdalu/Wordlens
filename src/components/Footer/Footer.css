@@ -1,0 +1,28 @@
+.footer{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding:1.5rem 1rem;
+   text-align: center;
+   font-weight: 500;
+   color: #000000;
+}
+
+.footer > * + *{
+    margin-top: 1rem;
+}
+
+.footer__api__link{
+    margin: 1rem 0;
+    border: 1px solid #000000;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.social_media_icon span{
+    margin-right: 1.2rem;
+}
