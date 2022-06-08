@@ -43,6 +43,7 @@
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;
+  border: none;
 }
 
 .search--button:active{
