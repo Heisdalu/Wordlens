@@ -34,3 +34,9 @@
     font-weight: 600;
     font-size: 1rem;
 }
+
+@media screen and (min-width:700px) {
+    .error__heading{
+        font-size: 1.3rem;
+    }
+}

@@ -1,20 +1,24 @@
-.header{
-    display: flex;
-    align-items: center;
-    border: 1px solid;
-    padding: 1.3rem 1rem;
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #E9ECF0;
+  padding: 1.3rem 1rem;
 }
 
-
-
-.header__circle{
-   margin-left: auto;
+.header__circle {
+  margin-left: auto;
 }
 
-.header__circle svg{
-    display: block;
+.header__circle svg {
+  display: block;
 }
 
-.header__circle svg path{
-    fill: #000000;
+.header__circle svg path {
+  fill: #000000;
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    padding-inline: 3rem;
+  }
 }
