@@ -1,0 +1,11 @@
+.header__logo{
+    font-size: 1.5rem;
+}
+
+.header__logo::before{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 115%;
+    background-color: black;
+}

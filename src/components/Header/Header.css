@@ -1,0 +1,20 @@
+.header{
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    padding: 0.5rem 1rem;
+}
+
+
+
+.header__circle{
+   margin-left: auto;
+}
+
+.header__circle svg{
+    display: block;
+}
+
+.header__circle svg path{
+    fill: #000000;
+}
