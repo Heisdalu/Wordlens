@@ -1,14 +1,27 @@
-import React, {useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./SearchWord.css";
 
 const SearchWord = (props) => {
-
   const inputRef = useRef();
 
-  const clickHandler= () => {
-    props.onClick((inputRef.current.value.trim()))
-  }
+  const clickHandler = () => {
+    props.onClick(inputRef.current.value.trim());
+  };
 
+  useEffect(() => {
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+       clickHandler()
+      }
+    });
+  });
+
+  // const Enterhandler = (e) => {
+
+  //   if(e.key === 'Enter') {
+  //     console.log('dd');
+  //   }
+  // }
 
   return (
     <section className="search__container">
@@ -43,10 +56,17 @@ const SearchWord = (props) => {
             </svg>
           </span>
 
-          <input type="text" placeholder="What would you like to search for?" className="search__input" ref={inputRef}/>
+          <input
+            type="text"
+            placeholder="What would you like to search for?"
+            className="search__input"
+            ref={inputRef}
+          />
         </label>
 
-        <button type="submit" className="search--button" onClick={clickHandler}>Search</button>
+        <button type="submit" className="search--button" onClick={clickHandler}>
+          Search
+        </button>
       </section>
     </section>
   );
