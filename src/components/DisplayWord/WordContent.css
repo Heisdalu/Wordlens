@@ -4,6 +4,7 @@
 
 .word__title{
     font-size: 1.5rem;
+    text-transform: capitalize;
 }
 
 
@@ -20,13 +21,7 @@
     padding: 0;
 }
 
-.word_pronunciation{
-    margin-top: 5px;
-}
 
-.word_pronunciation, .word_pronunciation svg{
-    display: block;
-}
 
 
 .word__list{

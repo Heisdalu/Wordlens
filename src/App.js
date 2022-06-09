@@ -20,7 +20,6 @@ function App() {
   useEffect(() => {
     if (searchValue.length > 0) {
       const getWord = async (word) => {
-        console.log("ff");
         try {
           setIsLoading(true);
           const data = await fetch(

@@ -19,6 +19,4 @@ const WordList = (props) => {
   );
 };
 
-// sentence: "hello there, Katie";
-// Synonyms: "";
 export default WordList;
