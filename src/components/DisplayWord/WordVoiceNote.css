@@ -1,5 +1,6 @@
 .word_pronunciation{
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .word_pronunciation, .word_pronunciation svg{

@@ -9,12 +9,16 @@ const WordList = (props) => {
 //   console.log(partofSpeech, definitions, synonyms, example);
   return (
     <li className="word_content">
-      <p className="">
-          <span className='speechPart'>{`(${partofSpeech})`}</span>
+      <p className="word_meaning{">
+        <span className="speechPart">{`(${partofSpeech})`}</span>
         {`${definitions}`}
       </p>
-      <p className="word__in_sentence">{example.length > 0  ? `sentence: "${example}"` : ''}</p>
-      <p className="word_synonyms">{synonyms.length > 0 ? `Synonyms: "${synonyms}"` : ''}</p>
+      <p className="word__in_sentence">
+        {example.length > 0 ? `sentence: "${example}"` : ""}
+      </p>
+      <p className="word_synonyms">
+        {synonyms.length > 0 ? `Synonyms: "${synonyms}"` : ""}
+      </p>
     </li>
   );
 };
