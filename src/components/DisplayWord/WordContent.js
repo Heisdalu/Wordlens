@@ -1,6 +1,7 @@
 import WordVoiceNote from "./WordVoiceNote";
 import "./WordContent.css";
 import WordList from "./WordList";
+import { useRef } from "react";
 
 const searchedWordDetail = (data) => {
 
@@ -21,6 +22,7 @@ const searchedWordDetail = (data) => {
 };
 
 const WordContent = (props) => {
+  const wordTitle = useRef();
   const [context] = props.data;
   // console.log(context);
   const otherPhonetic = context?.phonetics.map((el) => el.text).at(-1);
@@ -52,13 +54,13 @@ const WordContent = (props) => {
 
   return (
     <>
-      <h1 className="word__title">{context?.word || "hello"}</h1>
+      <h1 className="word__title" ref={wordTitle}>{context?.word || "hello"}</h1>
       <section className="word__subContainer">
         <span className="word_translation">
           {context?.phonetic || otherPhonetic || "/he'leu"}
         </span>
 
-        <WordVoiceNote />
+        <WordVoiceNote title={wordTitle}/>
       </section>
 
       {
