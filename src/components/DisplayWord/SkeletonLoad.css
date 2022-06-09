@@ -85,3 +85,26 @@
   max-width: 100px;
   height: 8px;
 }
+
+
+@media screen and (min-width:700px) {
+  .three{
+    max-width: 500px;
+  }
+
+  .four{
+    max-width: 550px;
+  }
+
+  .five{
+    max-width: 400px;
+  }
+
+  .six{
+    max-width: 300px;
+  }
+
+  .seven{
+    max-width: 450px;
+  }
+}

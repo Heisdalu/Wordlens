@@ -2,7 +2,7 @@ import "./SkeletonLoad.css";
 
 const SkeletonLoad = () => {
   return (
-    <section class='skeleton__box'>
+    <section className='skeleton__box'>
       <div className='box one'></div>
       <div className='box two'></div>
       <div className='box three'></div>

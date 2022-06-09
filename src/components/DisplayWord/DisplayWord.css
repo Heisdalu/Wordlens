@@ -1,4 +1,5 @@
 .word__container{
     padding: 1rem;
+    border: 1px solid #E9ECF0;
+    margin-bottom:3px ;
 }
-

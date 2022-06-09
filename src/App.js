@@ -13,7 +13,7 @@ function App() {
 
   const inputHandler = (word) => {
     if (word.length > 0) {
-      setSearchValue(word);
+      setSearchValue(() => word);
     }
   };
 
@@ -28,16 +28,16 @@ function App() {
           );
 
           if (!data.ok) {
+            setisDataValid(false);
             throw new Error("Not found");
           }
           const response = await data.json();
-          setIsLoading(false);
-          setisDataValid(true);
+          setIsLoading(() => false);
+          setisDataValid(() => true);
           setData(response);
         } catch (err) {
-          console.log(err.message);
-          setisDataValid(false);
-          return err.message;
+          setIsLoading(() => false);
+          setData(err.message)
         }
       };
 
@@ -52,7 +52,7 @@ function App() {
         <SearchWord onClick={inputHandler} />
         <DisplayWord
           loading={isLoading}
-          WordDetail={data}
+          wordDetail={data}
           dataValid={isDataValid}
         />
       </section>
