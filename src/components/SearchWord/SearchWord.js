@@ -1,7 +1,15 @@
-import React from "react";
+import React, {useRef } from "react";
 import "./SearchWord.css";
 
-const SearchWord = () => {
+const SearchWord = (props) => {
+
+  const inputRef = useRef();
+
+  const clickHandler= () => {
+    props.onClick((inputRef.current.value.trim()))
+  }
+
+
   return (
     <section className="search__container">
       <h1 className="search__title">
@@ -35,10 +43,10 @@ const SearchWord = () => {
             </svg>
           </span>
 
-          <input type="text" placeholder="What would you like to search for?" className="search__input" />
+          <input type="text" placeholder="What would you like to search for?" className="search__input" ref={inputRef}/>
         </label>
 
-        <button type="submit" className="search--button">Search</button>
+        <button type="submit" className="search--button" onClick={clickHandler}>Search</button>
       </section>
     </section>
   );
