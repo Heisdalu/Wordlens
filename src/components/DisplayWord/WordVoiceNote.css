@@ -1,0 +1,7 @@
+.word_pronunciation{
+    margin-top: 5px;
+}
+
+.word_pronunciation, .word_pronunciation svg{
+    display: block;
+}
