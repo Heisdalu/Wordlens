@@ -1,0 +1,15 @@
+.word_content{
+    margin-bottom: 2rem;
+}
+
+
+.word__in_sentence{
+    color: #8C98AD;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0.3rem 0;
+}
+
+.speechPart{
+    margin-right: 10px;
+}
