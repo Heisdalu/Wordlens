@@ -69,7 +69,7 @@ const LastColumn = () => {
             ry="35.3553"
             transform="rotate(45 100 50)"
             stroke="black"
-            stroke-opacity="0.12"
+            strokeOpacity="0.12"
           />
           <ellipse
             cx="150"
@@ -78,7 +78,7 @@ const LastColumn = () => {
             ry="35.3553"
             transform="rotate(45 150 100)"
             stroke="black"
-            stroke-opacity="0.12"
+            strokeOpacity="0.12"
           />
           <ellipse
             cx="50"
@@ -87,7 +87,7 @@ const LastColumn = () => {
             ry="35.3553"
             transform="rotate(45 50 100)"
             stroke="black"
-            stroke-opacity="0.12"
+            strokeOpacity="0.12"
           />
           <ellipse
             cx="100"
@@ -96,7 +96,7 @@ const LastColumn = () => {
             ry="35.3553"
             transform="rotate(45 100 150)"
             stroke="black"
-            stroke-opacity="0.12"
+            strokeOpacity="0.12"
           />
         </svg>
       </span>

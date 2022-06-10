@@ -44,11 +44,11 @@
 
 @keyframes dark_animate__box {
     0% {
-        background-color: hsl(222, 36%, 48%);
+        background-color: #2228359c;
     }
     
     100%{
-        background-color: hsl(222, 36%, 68%);
+        background-color: #4b56729c;
     }
     
 }
