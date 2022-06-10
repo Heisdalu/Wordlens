@@ -4,7 +4,6 @@ import WordList from "./WordList";
 import { useRef } from "react";
 
 const searchedWordDetail = (data) => {
-
   const wordObj = data.map((el) => ({
     partofSpeech: el.partOfSpeech,
     synonyms: el.synonyms.filter((el) => Boolean(el)).slice(0, 1),
@@ -24,8 +23,12 @@ const searchedWordDetail = (data) => {
 const WordContent = (props) => {
   const wordTitle = useRef();
   const [context] = props.data;
-  // console.log(context);
-  const otherPhonetic = context?.phonetics.map((el) => el.text).at(-1);
+
+  let otherPhonetic;
+  if (context?.phonetics) {
+    otherPhonetic = context?.phonetics.map((el) => el.text).at(-1);
+    console.log(context?.phonetics.map((el) => el));
+  }
 
   const defaultObj = [
     {
@@ -54,13 +57,15 @@ const WordContent = (props) => {
 
   return (
     <>
-      <h1 className="word__title" ref={wordTitle}>{context?.word || "hello"}</h1>
+      <h1 className="word__title" ref={wordTitle}>
+        {context?.word || "hello"}
+      </h1>
       <section className="word__subContainer">
         <span className="word_translation">
           {context?.phonetic || otherPhonetic || "/he'leu"}
         </span>
 
-        <WordVoiceNote title={wordTitle}/>
+        <WordVoiceNote title={wordTitle} />
       </section>
 
       {
