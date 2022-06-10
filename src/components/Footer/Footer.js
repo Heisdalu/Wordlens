@@ -19,7 +19,12 @@ const Footer = (props) => {
           The API used to serve this data was provided by dictionaryapi.dev,
           click on the link below to read more
         </p>
-        <a href="google.com" className={`footer__api__link ${dark_api_link}`}>
+        <a
+          href="https://dictionaryapi.dev/"
+          target= '_blank'
+          rel="noreferrer"
+          className={`footer__api__link ${dark_api_link}`}
+        >
           Visit API documentation
         </a>
       </div>
