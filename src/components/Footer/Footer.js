@@ -1,15 +1,21 @@
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = (props) => {
+
+
+  const dark_footer = props.mode ? 'dark_footer_border' : '';
+  const dark_footer_logo = props.mode ? 'dark_footer_logo' : '';
+  const dark_api_link = props.mode ? 'dark_link' : '';
+
   return (
-    <footer className="footer">
-      <h1 className="footer__logo">Wordlens</h1>
+    <footer className={`footer ${dark_footer}`}>
+      <h1 className={`footer__logo ${dark_footer_logo}`}>Wordlens</h1>
       <h1 className="desktop__heading">Wordlens</h1>
       <p className="footer__content">
         The API used to serve this data was provided by dictionaryapi.dev, click
         on the link below to read more
       </p>
-      <a href="google.com" className="footer__api__link">
+      <a href="google.com" className={`footer__api__link ${dark_api_link}`}>
         Visit API documentation
       </a>
       <div className="social_media_icon">

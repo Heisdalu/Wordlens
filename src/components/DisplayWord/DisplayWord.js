@@ -9,10 +9,12 @@ const DisplayWord = (props) => {
       props.wordDetail === "Not found") &&
     !props.loading;
 
+  const dark_border = props.mode ? "dark_word_container" : "";
+
   return (
-    <section className="word__container">
-      {props.loading && <SkeletonLoad />}
-      {error ? <ErrorPage /> : ""}
+    <section className={`word__container ${dark_border}`}>
+      {props.loading && <SkeletonLoad mode={props.mode}/>}
+      {error ? <ErrorPage mode={props.mode} /> : ""}
 
       {!props.loading && !error && <WordContent data={props.wordDetail} />}
     </section>

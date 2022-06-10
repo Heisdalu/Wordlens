@@ -11,17 +11,14 @@ const SearchWord = (props) => {
   useEffect(() => {
     window.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
-       clickHandler()
+        clickHandler();
       }
     });
   });
 
-  // const Enterhandler = (e) => {
-
-  //   if(e.key === 'Enter') {
-  //     console.log('dd');
-  //   }
-  // }
+  const dark_mode = props.mode ? "dark_search__label" : "";
+  const dark_mode_input = props.mode ? "dark_search__input" : "";
+  const dark_searchBar = props.mode ? "dark_searchBar" : "";
 
   return (
     <section className="search__container">
@@ -29,8 +26,8 @@ const SearchWord = (props) => {
         Search
         <span>for any word.</span>
       </h1>
-      <section className="searchBar">
-        <label className="search__label">
+      <section className={`searchBar ${dark_searchBar}`}>
+        <label className={`search__label ${dark_mode}`}>
           <span className="search_logo">
             <svg
               width="30"
@@ -59,7 +56,7 @@ const SearchWord = (props) => {
           <input
             type="text"
             placeholder="What would you like to search for?"
-            className="search__input"
+            className={`search__input ${dark_mode_input}`}
             ref={inputRef}
           />
         </label>

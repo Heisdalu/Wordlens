@@ -1,5 +1,28 @@
-@media screen and (min-width:700px) {
-  .sub_container{
+.main-Container {
+  background-color: #ffffff;
+  transition: background-color 1s;
+  /* background-color: #0E182A; */
+  /* background-color: #122239; */
+}
+
+.dark_main_container {
+  background-color: #0e182a !important;
+  transition: background-color 1s;
+}
+
+
+.sub_container{
+  color: #000000;
+  transition: color 1s;
+}
+
+.dark_sub_container{
+  color: #91A2CB!important;
+  transition: color 1s;
+}
+
+@media screen and (min-width: 700px) {
+  .sub_container {
     padding: 3rem;
     max-width: 800px;
     margin-inline: auto;

@@ -1,12 +1,28 @@
-.header__logo{
-    font-size: 1.5rem;
-    max-width: 105px;
+.header__logo {
+  font-size: 1.5rem;
+  max-width: 105px;
+  color: #000000;
+  transition: color 1s;
 }
 
-.header__logo::before{
-    content: '';
-    display: block;
-    height: 3px;
-    width: 110%;
-    background-color: black;
+.header__logo::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 110%;
+  background-color: #000000;
+}
+
+.dark-header {
+  color: #91a2cb !important;
+  transition: color 1s;
+}
+
+.dark-header::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 110%;
+  background-color: #91a2cb;
+  transition: background-color 1s;
 }

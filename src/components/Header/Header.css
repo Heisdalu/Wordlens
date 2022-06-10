@@ -1,12 +1,14 @@
 .header {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #E9ECF0;
+  border-bottom: 1px solid #e9ecf0;
   padding: 1.3rem 1rem;
+  transition: border 1s;
 }
 
 .header__circle {
   margin-left: auto;
+  cursor: pointer;
 }
 
 .header__circle svg {
@@ -15,6 +17,17 @@
 
 .header__circle svg path {
   fill: #000000;
+  transition: all 1s;
+}
+
+.dark-mode {
+  fill: #91a2cb !important;
+  transition: all 1s;
+}
+
+.dark_header_border {
+  border-bottom: 1px solid #122239;
+  transition: border 1s;
 }
 
 @media screen and (min-width: 700px) {

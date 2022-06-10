@@ -11,6 +11,14 @@ function App() {
   const [isDataValid, setisDataValid] = useState(false);
   const [data, setData] = useState("");
 
+  const [isDark, setIsDark] = useState(false);
+
+  const changeMode = () => {
+    setIsDark(prevState => !prevState);
+  } 
+
+  // console.log(isDark);
+
   const inputHandler = (word) => {
     if (word.length > 0) {
       setSearchValue(() => word);
@@ -44,18 +52,21 @@ function App() {
     }
   }, [searchValue]);
 
+  const mainContainer_dark = isDark ? 'dark_main_container' : '';
+  const sub_container_dark = isDark ? 'dark_sub_container' : '';
   return (
-    <section className="main-Container">
-      <Header />
-      <section className="sub_container">
-        <SearchWord onClick={inputHandler} />
+    <section className={`main-Container ${mainContainer_dark}`}>
+      <Header modeHandler={changeMode} mode={isDark} />
+      <section className={`sub_container ${sub_container_dark}`}>
+        <SearchWord onClick={inputHandler} mode={isDark} />
         <DisplayWord
           loading={isLoading}
           wordDetail={data}
           dataValid={isDataValid}
+          mode ={isDark}
         />
       </section>
-      <Footer />
+      <Footer mode={isDark}/>
     </section>
   );
 }

@@ -33,6 +33,13 @@
     border: 2px solid black;
     font-weight: 600;
     font-size: 1rem;
+    transition: border 1s;
+}
+
+.dark_button{
+    border: 1px solid #91A2CB;
+    color: #91A2CB;
+    transition: all 1s;
 }
 
 @media screen and (min-width:700px) {

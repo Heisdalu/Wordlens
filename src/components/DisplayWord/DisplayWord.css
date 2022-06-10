@@ -2,4 +2,11 @@
     padding: 1rem;
     border: 1px solid #E9ECF0;
     margin-bottom:3px ;
+    transition: border 1s;
+}
+
+
+.dark_word_container{
+    border: 1px solid #122239;
+    transition: border 1s;
 }
