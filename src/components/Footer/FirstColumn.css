@@ -1,0 +1,23 @@
+.first-column {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  .first-column {
+    display: block;
+  }
+
+  .first-column {
+    grid-area: 1/1/1/2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first_logo {
+    margin-right: auto;
+  }
+
+  .second__logo {
+    margin-left: auto;
+  }
+}
