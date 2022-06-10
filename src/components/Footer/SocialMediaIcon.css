@@ -1,0 +1,12 @@
+.social_media_icon {
+  margin: 1rem 0;
+}
+.social_media_icon span {
+  margin-right: 1.2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .social_media_icon {
+    margin: 1.5rem;
+  }
+}
