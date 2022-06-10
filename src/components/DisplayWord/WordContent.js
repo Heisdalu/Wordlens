@@ -27,7 +27,8 @@ const WordContent = (props) => {
   let otherPhonetic;
   if (context?.phonetics) {
     console.log(context?.phonetics);
-    otherPhonetic = context?.phonetics.map((el) => el.text).at(-1);
+    otherPhonetic = context?.phonetics.map((el) => el.text).slice(-1).join('');
+    console.log(otherPhonetic);
   }
 
   const defaultObj = [
