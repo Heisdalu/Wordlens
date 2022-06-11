@@ -4,19 +4,21 @@ import WordContent from "./WordContent";
 import ErrorPage from "./ErrorPage";
 
 const DisplayWord = (props) => {
-  const error =
-    (props.wordDetail === "Failed to fetch" ||
-      props.wordDetail === "Not found") &&
-    !props.loading;
+
+  const errorOccured = props.error ? (
+    <ErrorPage mode={props.mode} clearError={props.clearError} />
+  ) : (
+    ""
+  );
 
   const dark_border = props.mode ? "dark_word_container" : "";
 
   return (
     <section className={`word__container ${dark_border}`}>
       {props.loading && <SkeletonLoad mode={props.mode}/>}
-      {error ? <ErrorPage mode={props.mode} /> : ""}
+      {errorOccured}
 
-      {!props.loading && !error && <WordContent data={props.wordDetail} />}
+      {!props.loading && !props.error && <WordContent data={props.wordDetail} />}
     </section>
   );
 };

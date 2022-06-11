@@ -9,6 +9,7 @@ const SearchWord = (props) => {
   };
 
   useEffect(() => {
+    inputRef.current.value = props.value
     window.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         clickHandler();

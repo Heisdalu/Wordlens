@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 function App() {
   const [searchValue, setSearchValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isDataValid, setisDataValid] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [data, setData] = useState("");
 
   const [isDark, setIsDark] = useState(false);
@@ -17,7 +17,10 @@ function App() {
     setIsDark(prevState => !prevState);
   } 
 
-  // console.log(isDark);
+  const clearErrorPage = () => {
+    setIsError(false)
+    setSearchValue('')
+  }
 
   const inputHandler = (word) => {
     if (word.length > 0) {
@@ -35,15 +38,16 @@ function App() {
           );
 
           if (!data.ok) {
-            setisDataValid(false);
+           setIsError(true)
             throw new Error("Not found");
           }
           const response = await data.json();
           setIsLoading(() => false);
-          setisDataValid(() => true);
+          setIsError(() => false);
           setData(response);
         } catch (err) {
           setIsLoading(() => false);
+          setIsError(true)
           setData(err.message)
         }
       };
@@ -58,12 +62,13 @@ function App() {
     <section className={`main-Container ${mainContainer_dark}`}>
       <Header modeHandler={changeMode} mode={isDark} />
       <section className={`sub_container ${sub_container_dark}`}>
-        <SearchWord onClick={inputHandler} mode={isDark} />
+        <SearchWord onClick={inputHandler} mode={isDark} value={searchValue} />
         <DisplayWord
           loading={isLoading}
           wordDetail={data}
-          dataValid={isDataValid}
+          error={isError}
           mode ={isDark}
+          clearError= {clearErrorPage}
         />
       </section>
       <Footer mode={isDark}/>

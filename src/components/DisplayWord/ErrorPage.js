@@ -1,6 +1,10 @@
 import "./ErrorPage.css";
 
 const ErrorPage = (props) => {
+
+  const refreshHnadler = () => {
+    props.clearError()
+  }
   const dark_button = props.mode ? "dark_button" : "";
   return (
     <section className="error">
@@ -14,7 +18,7 @@ const ErrorPage = (props) => {
         <span className="error_sub_heading">no be juju be that!</span>
       </div>
 
-      <button className={`reset ${dark_button}`}>Take Me Home</button>
+      <button className={`reset ${dark_button}`} type='reset' onClick={refreshHnadler}>Take Me Home</button>
     </section>
   );
 };
