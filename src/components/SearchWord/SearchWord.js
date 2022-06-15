@@ -55,7 +55,7 @@ const SearchWord = (props) => {
           </span>
 
           <input
-            type="text"
+            type="search"
             placeholder="What would you like to search for?"
             className={`search__input ${dark_mode_input}`}
             ref={inputRef}
