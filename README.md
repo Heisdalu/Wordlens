@@ -6,4 +6,5 @@
  # Tools Used
  - HTML5
  - CSS3
- - REACT
+ - REACT.JS
+ - Web Speech Api
